@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Webagency</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="./webagency_images/images/favicon.ico" type="image/ico" sizes="32*32"/>
+  </head>
+
+  <body>
+    <input type="checkbox" id="menuBurger" />
+    <label for="menuBurger">☰</label>
+    <nav role="navigation" id="navMenu">
+
+      <div class="logo">
+        <a href="#"
+          ><img src="./webagency_images/images/logo.png" alt="logo"
+        /></a>
+      </div>
+
+      <ul>
+        <li></li>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <input type="checkbox" id="bg2" name="bg" value="bg2">
+    
+    <!--  -->
+
+      <!-- <input type="radio" id="bg2" name="bg" value="bg2" ><i class="fa fa-solid fa-angle-right"></i> -->
+
+    <header class="bg">
+
+      <label for="bg2" id="bt1"><i class="fa fa-solid fa-angle-left"></i></label>
+      <label for="bg2" id="bt2"><i class="fa fa-solid fa-angle-right"></i></label>
+
+      <div class="header-container">
+        <h1 id="accueil">
+          <span class="webagency">Webagency</span> : l'agence de tous vos
+          projets!
+        </h1>
+        <p>Vous avez un projet web? la webagency vous aide à le réaliser.</p>
+        <button>Plus d'infos</button>
+      </div>
+    </header>
+
+    <section class="service">
+      <div class="header">
+        <h2 id="services">Nos services</h2>
+
+        <div class="separator">
+          <div class="line"></div>
+          <div class="blue-cercle"></div>
+        </div>
+
+        <p>
+          De taille humaine, notre agence vous accompagne du début à la fin de
+          votre projet. Nos experts vous aident à optimiser l'expérience et tirer
+          le meilleur potentiel de chaque support du web au mobile.
+        </p>
+      </div>
+
+      <div class="main">
+        <div class="img-container">
+          <img
+            src="./webagency_images/images/main-feature.png"
+            alt="nos services" />
+        </div>
+        <div class="text-icon">
+          <div class="service-container">
+            <div class="icon">
+              <i class="fa fa-line-chart"></i>
+              <div class="cercles">
+                <div class="cercle"></div>
+                <div class="blue-cercle"></div>
+              </div> 
+            </div>
+            <div class="service">
+              <h3>UX design</h3>
+              <p>
+                Une équipe passionnée qui place l'utilisateur final au centre de
+                sa démarche pour une technologie plus humaine.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-container">
+            <div class="icon">
+              <i class="fa fa-cubes"></i>
+              <div class="cercles">
+                <div class="cercle"></div>
+                <div class="blue-cercle"></div>
+              </div> 
+            </div>
+            <div class="service">
+              <h3>UI design</h3>
+              <p>
+                Une interface optimisée qui permet à votre site web de rester à
+                la page au gré des évolutions techniques et des nouveaux usages.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-container">
+            <div class="icon">
+              <i class="fa fa-pie-chart"></i>
+              <div class="cercles">
+                <div class="cercle"></div>
+                <div class="blue-cercle"></div>
+              </div> 
+            </div>
+            <div class="service">
+              <h3>SEO</h3>
+              <p>
+                Nos experts en référencement vous permettent d'améliorer le
+                positionnement de votre site afin d'augmenter votre conversion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="header">
+        <h2 id="portfolio">Nos projets</h2>
+
+        <div class="separator">
+          <div class="line"></div>
+          <div class="blue-cercle"></div>
+        </div>
+
+        <p>
+          Beaucoup d'entreprises et particuliers nous ont fait confiance pour leur
+          projets! Découvrez une selection de nos réalisations tendances, modernes
+          et innovantes.
+        </p>
+
+        <ul class="projet">
+          <li>Tous</li>
+          <li>créations</li>
+          <li>Corporate</li>
+          <li>Porfolio</li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <div class="porfolio">
+          <img
+            src="./webagency_images/images/portfolio/01.jpg"
+            alt="projet 1" />
+          <img
+            src="./webagency_images/images/portfolio/02.jpg"
+            alt="projet 2" />
+          <img
+            src="./webagency_images/images/portfolio/03.jpg"
+            alt="projet 3" />
+          <img
+            src="./webagency_images/images/portfolio/04.jpg"
+            alt="projet 4" />
+          <img
+            src="./webagency_images/images/portfolio/05.jpg"
+            alt="projet 5" />
+          <img
+            src="./webagency_images/images/portfolio/06.jpg"
+            alt="projet 6" />
+          <img
+            src="./webagency_images/images/portfolio/07.jpg"
+            alt="projet 7" />
+          <img
+            src="./webagency_images/images/portfolio/08.jpg"
+            alt="projet 8" />
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="filter"></div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6612.4115818119035!2d2.3420996048891665!3d48.874656807006566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25%20Rue%20d&#39;Hauteville%2C%2075010%20Paris!5e0!3m2!1sfr!2sfr!4v1670057537249!5m2!1sfr!2sfr"
+        height="600"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="formulaire">
+        
+        <h4 id="contact">Contact info</h4>
+        <ul class="contact">
+          <li class="nom">WebAgency SAS</li>
+          <li class="adresse">25 ru d'hauteville 75010 Paris</li>
+          <li class="tel">tel: + 33102030405</li>
+        </ul>
+
+        <form>
+          
+
+          <input type="text" value="Nom" />
+          <input type="text" value="Email" />
+          <input type="text" value="Sujet" />
+          <textarea cols="30" rows="10">Votre message...</textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
+
+      
+    </section>
+
+  </body>
+</html>
