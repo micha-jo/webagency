@@ -1,6 +1,6 @@
 /* variable*/
 :root{
-  --color-1: hsl(196, 58%, 54%);
+  --color-1: rgb(70, 169, 206);
   --color-2: rgba(0,0,0,1);
   --color-3: rgb(255, 255, 255);
 }
@@ -255,7 +255,7 @@ iframe {
   position: relative;
 }
 .blue-filter{
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(70, 169, 206 , 0.5);
   z-index: 1;
   position: absolute;
   height: 100%;
