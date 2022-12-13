@@ -1,14 +1,11 @@
-@font-face {
-  font-family: "police1";
-  src: url(./assets/police/Montserrat-Thin.ttf);
-}
-
+/* variable*/
 :root{
   --color-1: hsl(196, 58%, 54%);
   --color-2: rgba(0,0,0,1);
   --color-3: rgb(255, 255, 255);
 }
 
+/* parametres généraux */
 *{
   margin: 0px ; 
   padding: 0px; 
@@ -21,21 +18,29 @@ body{
   width: 80%;
   margin: auto; 
 }
-section{
-  margin-top: 100px;
+::selection{
+  color: var(--color-3);
+  background-color: var(--color-1);
+}
+h1{
+  text-transform:uppercase;
+  font-size: calc(1rem + 1.8vw);
+}
+h2{
+  font-size: calc(1rem + 1.5vw);
+  text-transform:uppercase;
+}
+h3{
+  font-size: calc(1rem + 1vw);
+  margin: 12px 0px ;
+}
+img{
+  max-width: 100%;
 }
 a {
   text-decoration: none;
   color: var(--color-2);
   position: relative;
-}
-::selection{
-  color: var(--color-3);
-  background-color: var(--color-1);
-}
-
-img{
-  max-width: 100%;
 }
 li a:hover::before{
   content: "";
@@ -46,10 +51,70 @@ li a:hover::before{
   top: -2px
 }
 
+button, input[type=submit]{
+  color: var(--color-3);
+  background-color: var(--color-1);
+  padding: 12px;
+  border: none; 
+  border-radius: 5px;
+}
+
+
+/* separateur horizontale et cercle icon et rond bleu */
+.separator{
+  margin: 36px auto ;
+}
+.line{
+
+  width: 200px;
+  height: 1px;
+  background-color: lightgray;
+  margin: auto;
+  position: relative;
+}  
+.blue-circle{
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  background-color: var(--color-1);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid white 3px;
+}
+
+.circle{
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  transform: rotate(180deg);
+}
+.ring{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid 1px lightgray;
+}
+
+.service-container:hover .circle{
+  animation : tourne 3s ease-in-out infinite; 
+}
+@keyframes tourne{
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+
+
+/* menu burger */
 label[for="menuBurger"], input[type=checkbox]{
   display: none;
 }
-
+/* navigation */
 nav{
   display: flex;
   align-items: center;
@@ -63,24 +128,25 @@ nav{
   width: 50%; 
   
 }
-
 nav ul {
   width: 50%; 
   display: flex;
   justify-content: space-around;
 }
-header{
-  background: url(./webagency_images/images/slider/bg1.jpg) center/cover;
-  transition: 1s linear;
+
+/* en-tete site  */
+.page-header{
   color: var(--color-3);
   height: 500px; 
   display: flex;
   align-items: center;
   position: relative;
-  
+
+  background: url(./webagency_images/images/slider/bg1.jpg) center/cover;
+  transition: 1s linear;
 }
 
-#bg2:checked ~header{
+#bg2:checked ~.page-header{
   background: url(./webagency_images/images/slider/bg2.jpg) center/cover;
   transition: 1s linear;
 }
@@ -105,9 +171,6 @@ header{
   border-radius: 100px 0px 0px 100px;
 }
 
-
-
-
 .header-container{
   width: 50%;
   margin: 24px;
@@ -115,63 +178,26 @@ header{
 .header-container p{
   margin: 24px 0px;
 }
-
-h1{
-  text-transform:uppercase;
-  font-size: calc(1rem + 1.8vw);
-}
-
 .webagency{
   color:var(--color-1);
 }
 
-button, input[type=submit]{
-  color: var(--color-3);
-  background-color: var(--color-1);
-  padding: 12px;
-  border: none; 
-  border-radius: 5px;
-}
 
-.header{
+/* parametre section */
+.section-header{
   width:60%;
   margin: 24px auto; 
   text-align: center;
 }
-
-h2{
-  
-  font-size: calc(1rem + 1.5vw);
-  text-transform:uppercase;
-}
-.separator{
-  margin: 36px auto ;
-}
-.line{
-
-  width: 200px;
-  height: 1px;
-  background-color: lightgray;
-  margin: auto;
-  position: relative;
-}  
-
-.blue-cercle{
-  border-radius: 100%;
-  height: 15px;
-  width: 15px;
-  background-color: var(--color-1);
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: solid white 3px;
+section{
+  margin-top: 100px;
 }
 
-.service .main{
+/* service */
+.service article{
   display: flex;
   align-items: center;&
 }
-
 .fa-line-chart, .fa-cubes, .fa-pie-chart{
   color: var(--color-1);
   transform: scale(1.5);
@@ -182,35 +208,6 @@ h2{
   position: relative;
  }
 
-.cercles{
-  position: absolute;
-  top: 3px;
-  right: 5px;
-  transform: rotate(180deg);
-}
-
-.cercle{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: solid 1px lightgray;
-}
-
-
-.service-container:hover .cercles{
-  animation : tourne 3s ease-in-out infinite; 
-}
-@keyframes tourne{
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(540deg);
-  }
-}
-
-
-
 .service-container{
   display: flex;
   align-items: center;
@@ -218,11 +215,13 @@ h2{
   margin: 24px;
 }
 
-.portfolio{
+/* projet */
+
+.projet{
   background-color: rgb(238, 237, 237);
   padding: 6px 0px;
 }
-.projet{
+.filter{
   display: flex;
   justify-content:space-evenly;
   margin: 12px auto;
@@ -230,48 +229,43 @@ h2{
   border-radius: 5px;
   max-width: 400px;
 }
-.projet li {
+.filter li {
   padding: 10px;
 }
 
-.main .porfolio{
+article .projet-container{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
-.porfolio img{
+.projet-container img{
   min-width: 200px;
   width: 20%;
   height: auto;
   margin: 12px 12px 6px;
-  
 }
-.map {
-  
-  position: relative;
-  
 
+/* map */
+.map {
+  position: relative;
 }
 iframe {
   width: 100%;
   position: relative;
 }
-.filter{
+.blue-filter{
   background-color: rgba(0, 0, 255, 0.5);
   z-index: 1;
   position: absolute;
   height: 100%;
   width: 100%;
 }
-
-
-.filter:hover {
+.blue-filter:hover {
   background-color: rgba(0, 0, 255, 0);
   transition: 1s ease;
-  
 }
-.formulaire {
+.contact {
   display: flex;
   flex-direction: column;
   position: absolute; 
@@ -283,10 +277,7 @@ iframe {
   width: 30%;
   z-index: 2;
 }
-h4{
-  font-size: 1.5rem;
-  margin: 12px 0px ;
-}
+
 li.nom {
   font-weight: bold;
 }
@@ -305,8 +296,9 @@ input[type=submit]{
   width: 50%;
 }
 
+
 @media screen and (max-width:1100px){
-  .service>.main {
+  .service article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,17 +313,17 @@ input[type=submit]{
     width: 50%;
   }
   
-  .main .porfolio{
+  .projet article{
     display: flex;
     flex-direction: column;
     align-items: center;
     
   }
-  .porfolio img{
+  .projet-container img{
      width: 70%;
     height: auto;
   }
-  .formulaire{
+  .contact{
     position: relative;
     margin: auto;
     width: 80%;
@@ -344,7 +336,7 @@ input[type=submit]{
 
 @media screen and (max-width:550px){
   
-  .projet {
+  .filter {
     display: flex;
     flex-direction: column;
   }
